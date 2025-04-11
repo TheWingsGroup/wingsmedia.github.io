@@ -3,31 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wings Media</title>
+  <title>WingsMedia</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Wings Media Logo" />
-    <h1>Wings Media</h1>
-    <p><em>A Revolution in Thought. A Movement in Ink.</em></p>
+    <img src="assets/logo.png" alt="WingsMedia Logo" class="logo" />
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-      <a href="podcasts.html">Listen to Our Podcasts</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="podcasts.html">Podcasts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="container">
-    <h2>Launching Soon</h2>
-    <p>We’re building a platform for voices that matter. Ideas that spark. And freedom that speaks.</p>
-    <p>Follow us on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> for the latest.</p>
-  </div>
+  <main>
+    <section class="hero">
+      <h1>Welcome to WingsMedia</h1>
+      <p>Unfolding voices, igniting change.</p>
+      <a href="podcasts.html" class="btn">🎧 Listen to Our Podcasts</a>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Wings Media | Built with heart and purpose.
+    <p>&copy; 2025 WingsMedia. All rights reserved.</p>
   </footer>
 </body>
 </html>
