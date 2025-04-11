@@ -3,118 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Articles - WingsMedia</title>
+  <title>Wings Media</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body class="fade-out">
+
+  <!-- Header -->
+  <header class="black-bar">
+    <a href="index.html" class="logo">🕊️</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content (Replace this section in each page) -->
+  <main>
+    <main>
+  <section class="hero">
+    <h1>Articles & Essays</h1>
+    <p>Explore thought-provoking content from our creators — on Medium, LinkedIn, and more.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature"><h2>✍️ Medium</h2><p><a href="#" target="_blank">Check out our long-form content on Medium</a>.</p></div>
+    <div class="feature"><h2>🔗 LinkedIn</h2><p><a href="https://linkedin.com/in/akhilesh-v-s-564546236" target="_blank">Follow our team on LinkedIn</a> for updates and reflections.</p></div>
+    <div class="feature"><h2>📬 Substack</h2><p><a href="#" target="_blank">Subscribe to Wings Dispatch</a> for premium content directly to your inbox.</p></div>
+  </section>
+</main>
+  </main>
+
+  <!-- Footer -->
+  <footer class="black-bar">
+    <p>&copy; 2025 Wings Media. All rights reserved. Powered by truth & freedom.</p>
+  </footer>
+
+  <!-- Transitions -->
   <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const revealTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-      if (revealTop < windowHeight - revealPoint) {
-        el.classList.add('visible');
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      if (!link.href.startsWith("#")) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location = link.href;
+          }, 300);
+        });
       }
     });
-  });
-</script>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="articles.html" class="nav-link active">Articles</a>
-        <a href="podcasts.html" class="nav-link">Podcasts</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
+  </script>
 
-  <main class="page-content fade-in">
-    <h1>Featured Articles</h1>
-    <p class="intro-text">Dive into our deep insights, thought-provoking essays, and social critiques written across platforms by WingsMedia's creators.</p>
-
-    <section class="articles-list">
-      <div class="article-card">
-        <h2>🔥 Power and the People</h2>
-        <p>Akhilesh V S explores the modern-day evolution of democracy, youth voices, and policy paradoxes.</p>
-        <a href="https://akhileshvs.substack.com" target="_blank">Read on Substack →</a>
-      </div>
-
-      <div class="article-card">
-        <h2>🌍 Economic Equity & Gen Z</h2>
-        <p>Published on Medium, this article breaks down the relationship between digital freedom, capital, and empowerment.</p>
-        <a href="https://medium.com/@akhileshramamoorthy39" target="_blank">Read on Medium →</a>
-      </div>
-
-      <div class="article-card">
-        <h2>💡 Reimagining Progress</h2>
-        <p>In this piece on LinkedIn, Akhilesh reflects on the cultural shift happening across India’s youth, and where we go next.</p>
-        <a href="https://www.linkedin.com/in/akhilesh-v-s-564546236/" target="_blank">Read on LinkedIn →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WingsMedia - [PAGE NAME]</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="fade-in">
-
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="podcasts.html">Podcasts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content">
-    <!-- Unique page content goes here -->
-  </main>
-
-  <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
-  </footer>
-<main>
-    <section class="hero">
-        <h1>Our Articles</h1>
-        <p>Read deep, thoughtful, and raw perspectives by our creators on Medium, LinkedIn, and Substack.</p>
-    </section>
-
-    <section class="features">
-        <div class="feature">
-            <h2>📝 Medium</h2>
-            <p><a href="https://medium.com/@yourusername" target="_blank">Follow us on Medium</a> for in-depth takes.</p>
-        </div>
-        <div class="feature">
-            <h2>🔗 LinkedIn</h2>
-            <p><a href="https://linkedin.com/in/akhilesh-v-s-564546236" target="_blank">Connect with us on LinkedIn</a>.</p>
-        </div>
-        <div class="feature">
-            <h2>✉️ Substack</h2>
-            <p><a href="https://yoursubstack.substack.com" target="_blank">Subscribe for regular updates</a>.</p>
-        </div>
-    </section>
-</main>
 </body>
 </html>
