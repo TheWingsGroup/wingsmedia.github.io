@@ -4,31 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Podcasts - WingsMedia</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">WingsMedia</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container">
+      <div class="logo">WingsMedia</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="podcasts.html" class="nav-link active">Podcasts</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Our Podcasts</h1>
-    <p>Listen to student voices breaking boundaries.</p>
-    <ul>
-      <li><a href="#">🎧 "Break the Silence" – Hosted by Dinesh</a></li>
-      <li><a href="#">🎧 "The Mepco Manifesto" – Hosted by Akhilesh</a></li>
-    </ul>
+  <main class="page-content fade-in">
+    <h1>🎙 Our Podcasts</h1>
+    <p class="intro-text">Tune into the voices that matter. From culture to politics, WingsMedia's podcasts are raw, real, and revolutionary.</p>
+
+    <section class="podcast-grid">
+      <div class="podcast-card">
+        <h2>🗣 Voice of the Youth</h2>
+        <p>Hosted by <strong>Purushothaman</strong>, this show dives into the pulse of young India – politics, education, and society.</p>
+        <a href="#" class="listen-button">Listen Now</a>
+      </div>
+
+      <div class="podcast-card">
+        <h2>🔥 Fire & Freedom</h2>
+        <p>With <strong>Akhilesh</strong> at the mic, this podcast explores resistance, art, and democratic dilemmas.</p>
+        <a href="#" class="listen-button">Listen Now</a>
+      </div>
+
+      <div class="podcast-card">
+        <h2>💭 The Think Tank</h2>
+        <p>Join <strong>Dinesh</strong> and <strong>Gowtham</strong> in decoding global affairs and tech disruptions from a human-first lens.</p>
+        <a href="#" class="listen-button">Listen Now</a>
+      </div>
+
+      <div class="podcast-card">
+        <h2>🎧 Culture Unplugged</h2>
+        <p><strong>Navaneet</strong> hosts vibrant convos on music, movies, memes, and how culture influences resistance.</p>
+        <a href="#" class="listen-button">Listen Now</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
