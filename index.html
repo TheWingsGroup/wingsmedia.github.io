@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wings Media</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      background: #f9f9f9;
-      color: #333;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      text-align: center;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: #f4f4f4;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
       background-color: #000;
       color: #fff;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 0.5rem;
     }
 
     nav {
       background-color: #111;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem 0;
+      gap: 1rem;
       flex-wrap: wrap;
+      padding: 1rem;
     }
 
     nav a {
@@ -37,7 +57,7 @@
       border: 2px solid #fff;
       padding: 0.5rem 1rem;
       border-radius: 5px;
-      transition: 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     nav a:hover {
@@ -45,45 +65,43 @@
       color: #000;
     }
 
-    .logo {
-      max-width: 120px;
-      margin: 0 auto 1rem;
-      display: block;
-    }
-
     main {
+      flex: 1;
       padding: 2rem;
+      text-align: center;
     }
 
-    h1 {
-      margin: 0.5rem 0 0.2rem;
-      font-size: 2.5rem;
+    main h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #222;
     }
 
-    .subtitle {
+    main p {
       font-size: 1.1rem;
-      font-style: italic;
-      color: #ccc;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    main a {
+      color: #0066cc;
+      text-decoration: none;
     }
 
     footer {
-      background: #111;
+      background-color: #111;
       color: #ccc;
+      text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-    }
-
-    a {
-      color: #0066cc;
-      text-decoration: none;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.jpg" alt="Wings Media Logo" class="logo">
+    <img src="logo.jpg" alt="Wings Media Logo" class="logo" />
     <h1>Wings Media</h1>
     <p class="subtitle">A Revolution in Thought. A Movement in Ink.</p>
   </header>
@@ -98,7 +116,7 @@
 
   <main>
     <h2>Launching Soon</h2>
-    <p>We’re building a platform for voices that matter. Ideas that spark. And freedom that speaks.</p>
+    <p>We're building a platform for voices that matter. Ideas that spark. And freedom that speaks.</p>
     <p>Follow us on <a href="https://www.linkedin.com/in/akhilesh-v-s-564546236" target="_blank">LinkedIn</a> for the latest.</p>
   </main>
 
