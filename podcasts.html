@@ -3,124 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Podcasts - WingsMedia</title>
+  <title>Wings Media</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body class="fade-out">
+
+  <!-- Header -->
+  <header class="black-bar">
+    <a href="index.html" class="logo">🕊️</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content (Replace this section in each page) -->
+  <main>
+    <main>
+  <section class="hero">
+    <h1>Wings Media Podcasts</h1>
+    <p>Where truth speaks loud. Tune into voices that move minds.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature"><h2>🗣️ Freedom Voice</h2><p>With Purushothaman — political truth-telling, raw and fearless.</p></div>
+    <div class="feature"><h2>👥 Youth Unfiltered</h2><p>Dinesh's take on modern youth, empowerment, and the future.</p></div>
+    <div class="feature"><h2>🌍 Ground Truth</h2><p>Stories from the grassroots — bold, unfiltered, real.</p></div>
+  </section>
+</main>
+  </main>
+
+  <!-- Footer -->
+  <footer class="black-bar">
+    <p>&copy; 2025 Wings Media. All rights reserved. Powered by truth & freedom.</p>
+  </footer>
+
+  <!-- Transitions -->
   <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const revealTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-      if (revealTop < windowHeight - revealPoint) {
-        el.classList.add('visible');
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      if (!link.href.startsWith("#")) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location = link.href;
+          }, 300);
+        });
       }
     });
-  });
-</script>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="articles.html" class="nav-link">Articles</a>
-        <a href="podcasts.html" class="nav-link active">Podcasts</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
+  </script>
 
-  <main class="page-content fade-in">
-    <h1>🎙 Our Podcasts</h1>
-    <p class="intro-text">Tune into the voices that matter. From culture to politics, WingsMedia's podcasts are raw, real, and revolutionary.</p>
-
-    <section class="podcast-grid">
-      <div class="podcast-card">
-        <h2>🗣 Voice of the Youth</h2>
-        <p>Hosted by <strong>Purushothaman</strong>, this show dives into the pulse of young India – politics, education, and society.</p>
-        <a href="#" class="listen-button">Listen Now</a>
-      </div>
-
-      <div class="podcast-card">
-        <h2>🔥 Fire & Freedom</h2>
-        <p>With <strong>Akhilesh</strong> at the mic, this podcast explores resistance, art, and democratic dilemmas.</p>
-        <a href="#" class="listen-button">Listen Now</a>
-      </div>
-
-      <div class="podcast-card">
-        <h2>💭 The Think Tank</h2>
-        <p>Join <strong>Dinesh</strong> and <strong>Gowtham</strong> in decoding global affairs and tech disruptions from a human-first lens.</p>
-        <a href="#" class="listen-button">Listen Now</a>
-      </div>
-
-      <div class="podcast-card">
-        <h2>🎧 Culture Unplugged</h2>
-        <p><strong>Navaneet</strong> hosts vibrant convos on music, movies, memes, and how culture influences resistance.</p>
-        <a href="#" class="listen-button">Listen Now</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WingsMedia - [PAGE NAME]</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="fade-in">
-
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="podcasts.html">Podcasts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content">
-    <!-- Unique page content goes here -->
-  </main>
-
-  <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
-  </footer>
-<main>
-    <section class="hero">
-        <h1>🎧 Our Podcasts</h1>
-        <p>Explore mind-opening shows hosted by our passionate creators. Available on Spotify, YouTube & more.</p>
-    </section>
-
-    <section class="features">
-        <div class="feature">
-            <h2>🗣️ The Freedom Voice</h2>
-            <p>Hosted by Purushothaman — tackling freedom, politics, and what's right for the nation.</p>
-        </div>
-        <div class="feature">
-            <h2>🧠 Youth Unfiltered</h2>
-            <p>Dinesh’s powerful take on youth, reality, and building a better tomorrow.</p>
-        </div>
-        <div class="feature">
-            <h2>🌍 Ground Truth</h2>
-            <p>Raw conversations with locals and experts that hit hard and feel real.</p>
-        </div>
-    </section>
-</main>
 </body>
 </html>
