@@ -4,32 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - WingsMedia</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">WingsMedia</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container">
+      <div class="logo">WingsMedia</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="podcasts.html" class="nav-link">Podcasts</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <p>Reach out with questions, suggestions, or support:</p>
-    <ul>
-      <li>Email: contact@wingsmedia.online</li>
-      <li>Instagram: @wingsmedia.online</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/akhilesh-v-s-564546236/">Akhilesh V S</a></li>
-    </ul>
+  <main class="page-content fade-in">
+    <h1>📬 Contact Us</h1>
+    <p class="intro-text">Got a story to share, a show idea, or just want to say hi? Drop us a message below or connect with us on social media.</p>
+
+    <form class="contact-form" action="mailto:akhileshramamoorthy39@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </main>
 
   <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
