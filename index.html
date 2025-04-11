@@ -3,44 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WingsMedia - Home</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>WingsMedia</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-  <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const revealTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-      if (revealTop < windowHeight - revealPoint) {
-        el.classList.add('visible');
-      }
-    });
-  });
-</script>
-<body>
+<body class="fade-in">
+
+  <!-- Header -->
   <header>
-    <div class="nav-container">
-      <div class="logo">WingsMedia</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="podcasts.html">Podcasts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+    <a href="index.html" class="logo">WingsMedia</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="hero">
-    <h1>Welcome to WingsMedia</h1>
-    <p>Empowering Thoughts, Redefining Perspectives.</p>
-    <a class="cta" href="podcasts.html">🎙 Listen to Our Podcasts</a>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero reveal">
+    <h1>Voices that Matter</h1>
+    <p>WingsMedia is a youth-driven platform for bold, unfiltered, and powerful voices through podcasts, stories, and real-life perspectives.</p>
+  </section>
 
+  <!-- Main Content -->
+  <section class="page-content">
+    <div class="card reveal">
+      <h2>🎙️ Explore Our Podcasts</h2>
+      <p>From political thoughts to personal experiences, dive into a world of fresh narratives.</p>
+      <a href="podcasts.html" class="btn">Listen Now</a>
+    </div>
+
+    <div class="card reveal">
+      <h2>📰 Read Our Articles</h2>
+      <p>Latest perspectives published on LinkedIn, Medium, and Substack.</p>
+      <a href="articles.html" class="btn">Read More</a>
+    </div>
+
+    <div class="card reveal">
+      <h2>💬 Join The Movement</h2>
+      <p>Contact us or contribute your thoughts, experiences, or feedback.</p>
+      <a href="contact.html" class="btn">Reach Out</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
+    <p>&copy; 2025 WingsMedia | All rights reserved</p>
   </footer>
+
+  <!-- JS for Scroll Reveal -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+        if (revealTop < windowHeight - revealPoint) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
