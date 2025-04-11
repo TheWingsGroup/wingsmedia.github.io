@@ -99,6 +99,23 @@
   <footer>
     <p>© 2025 WingsMedia. All rights reserved.</p>
   </footer>
+<script>
+    document.body.classList.add("fade-out");
+    window.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.remove("fade-out");
+    });
 
+    document.querySelectorAll("a").forEach(link => {
+        if (!link.href.startsWith("#")) {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location = link.href;
+                }, 300); // match fade duration
+            });
+        }
+    });
+</script>
 </body>
 </html>
