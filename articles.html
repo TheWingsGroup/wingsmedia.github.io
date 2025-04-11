@@ -4,31 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Articles - WingsMedia</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">WingsMedia</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container">
+      <div class="logo">WingsMedia</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="articles.html" class="nav-link active">Articles</a>
+        <a href="podcasts.html" class="nav-link">Podcasts</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Published Articles</h1>
-    <ul>
-      <li><a href="https://www.linkedin.com/posts/akhilesh-v-s">The System is Stuck, We’re Not</a> - on LinkedIn</li>
-      <li><a href="https://akhileshvs.substack.com">What We Dream For</a> - on Substack</li>
-      <li><a href="https://medium.com/@akhileshvs">Resistance with Words</a> - on Medium</li>
-    </ul>
+  <main class="page-content fade-in">
+    <h1>Featured Articles</h1>
+    <p class="intro-text">Dive into our deep insights, thought-provoking essays, and social critiques written across platforms by WingsMedia's creators.</p>
+
+    <section class="articles-list">
+      <div class="article-card">
+        <h2>🔥 Power and the People</h2>
+        <p>Akhilesh V S explores the modern-day evolution of democracy, youth voices, and policy paradoxes.</p>
+        <a href="https://akhileshvs.substack.com" target="_blank">Read on Substack →</a>
+      </div>
+
+      <div class="article-card">
+        <h2>🌍 Economic Equity & Gen Z</h2>
+        <p>Published on Medium, this article breaks down the relationship between digital freedom, capital, and empowerment.</p>
+        <a href="https://medium.com/@akhileshramamoorthy39" target="_blank">Read on Medium →</a>
+      </div>
+
+      <div class="article-card">
+        <h2>💡 Reimagining Progress</h2>
+        <p>In this piece on LinkedIn, Akhilesh reflects on the cultural shift happening across India’s youth, and where we go next.</p>
+        <a href="https://www.linkedin.com/in/akhilesh-v-s-564546236/" target="_blank">Read on LinkedIn →</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
