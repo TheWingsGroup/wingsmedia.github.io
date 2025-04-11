@@ -2,127 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wings Media</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Playfair Display', serif;
-      background: #f4f4f4;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 1.5rem 1rem;
-      text-align: center;
-    }
-
-    .logo {
-      width: 100px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #ccc;
-      margin-top: 0.5rem;
-    }
-
-    nav {
-      background-color: #111;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    main h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      color: #222;
-    }
-
-    main p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #444;
-    }
-
-    main a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    footer {
-      background-color: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <img src="logo.jpg" alt="Wings Media Logo" class="logo" />
+    <img src="assets/logo.png" alt="Wings Media Logo" />
     <h1>Wings Media</h1>
-    <p class="subtitle">A Revolution in Thought. A Movement in Ink.</p>
+    <p><em>A Revolution in Thought. A Movement in Ink.</em></p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="podcasts.html">Listen to Our Podcasts</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="articles.html">Articles</a>
-    <a href="podcasts.html">Listen to Our Podcasts</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
+  <div class="container">
     <h2>Launching Soon</h2>
-    <p>We're building a platform for voices that matter. Ideas that spark. And freedom that speaks.</p>
-    <p>Follow us on <a href="https://www.linkedin.com/in/akhilesh-v-s-564546236" target="_blank">LinkedIn</a> for the latest.</p>
-  </main>
+    <p>We’re building a platform for voices that matter. Ideas that spark. And freedom that speaks.</p>
+    <p>Follow us on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> for the latest.</p>
+  </div>
 
   <footer>
-    © 2025 Wings Media | Built with heart and purpose.
+    &copy; 2025 Wings Media | Built with heart and purpose.
   </footer>
-
 </body>
 </html>
