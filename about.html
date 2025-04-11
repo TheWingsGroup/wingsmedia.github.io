@@ -3,119 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - WingsMedia</title>
+  <title>Wings Media</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body class="fade-out">
+
+  <!-- Header -->
+  <header class="black-bar">
+    <a href="index.html" class="logo">🕊️</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<main>
+  <section class="hero">
+    <h1>About Wings Media</h1>
+    <p>We’re a voice for the voiceless. Meet the minds behind the mission.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature"><h2>🎙️ Purushothaman</h2><p>Leading fearless debates with courage and insight.</p></div>
+    <div class="feature"><h2>🎤 Dinesh</h2><p>Bold youth perspective that shakes the system.</p></div>
+    <div class="feature"><h2>📢 Akhilesh</h2><p>Tech + innovation driving our digital revolution.</p></div>
+    <div class="feature"><h2>📣 Navaneet</h2><p>Connector of stories and storyteller of impact.</p></div>
+    <div class="feature"><h2>🎧 Gowtham</h2><p>Audio magician making every word matter.</p></div>
+  </section>
+</main> 
+  <footer class="black-bar">
+    <p>&copy; 2025 Wings Media. All rights reserved. Powered by truth & freedom.</p>
+  </footer>
+
+  <!-- Transitions -->
   <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const revealTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-      if (revealTop < windowHeight - revealPoint) {
-        el.classList.add('visible');
-      }
-    });
-  });
-</script>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="articles.html" class="nav-link">Articles</a>
-        <a href="podcasts.html" class="nav-link">Podcasts</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content fade-in">
-    <h1>Meet the Team</h1>
-
-    <div class="team-member">
-      <h2>Akhilesh V S</h2>
-      <p>Founder of WingsMedia, passionate about changing perspectives in society through unique insights in economics, social justice, and youth-driven thought leadership.</p>
-    </div>
-
-    <div class="team-member">
-      <h2>Purushothaman</h2>
-      <p>Host of history and philosophy podcasts, making ancient wisdom relevant to modern life with compelling narration and depth.</p>
-    </div>
-
-    <div class="team-member">
-      <h2>Dinesh</h2>
-      <p>Explores science, logic, and rationality. Brings facts to light with engaging arguments and explanations for curious minds.</p>
-    </div>
-
-    <div class="team-member">
-      <h2>Gowtham</h2>
-      <p>Covers the latest in technology, AI, and innovation trends, helping audiences make sense of the future through digestible stories.</p>
-    </div>
-
-    <div class="team-member">
-      <h2>Navaneet</h2>
-      <p>Shares views on sports, cinema, and entertainment. Combines fandom and critique with wit and insight.</p>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WingsMedia - [PAGE NAME]</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="fade-in">
-
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="podcasts.html">Podcasts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content">
-    <!-- Unique page content goes here -->
-  </main>
-
-  <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
-  </footer>
-<script>
-    document.body.classList.add("fade-out");
     window.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.remove("fade-out");
+      document.body.classList.remove("fade-out");
     });
 
     document.querySelectorAll("a").forEach(link => {
-        if (!link.href.startsWith("#")) {
-            link.addEventListener("click", e => {
-                e.preventDefault();
-                document.body.classList.add("fade-out");
-                setTimeout(() => {
-                    window.location = link.href;
-                }, 300); // match fade duration
-            });
-        }
+      if (!link.href.startsWith("#")) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location = link.href;
+          }, 300);
+        });
+      }
     });
-</script>
+  </script>
+
 </body>
 </html>
