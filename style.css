@@ -108,3 +108,41 @@ footer {
     transform: translateY(0);
   }
 }
+.intro-text {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.article-card {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 64, 129, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 64, 129, 0.25);
+}
+
+.article-card h2 {
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.article-card a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.article-card a:hover {
+  text-decoration: underline;
+}
