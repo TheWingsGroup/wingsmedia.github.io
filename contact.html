@@ -3,105 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - WingsMedia</title>
+  <title>Wings Media</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body class="fade-out">
+
+  <!-- Header -->
+  <header class="black-bar">
+    <a href="index.html" class="logo">🕊️</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="podcasts.html">Podcasts</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  
+  <main>
+    <main>
+  <section class="hero">
+    <h1>Get in Touch</h1>
+    <p>We’re here to listen. Contact Wings Media for ideas, questions, or collabs.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature"><h2>Email</h2><p><a href="mailto:akhileshramamoorthy39@gmail.com">akhileshramamoorthy39@gmail.com</a></p></div>
+    <div class="feature"><h2>Phone</h2><p><a href="tel:+918838227862">+91 88382 27862</a></p></div>
+    <div class="feature"><h2>LinkedIn</h2><p><a href="https://linkedin.com/in/akhilesh-v-s-564546236" target="_blank">Connect with us here</a></p></div>
+  </section>
+</main>
+  </main>
+
+  <!-- Footer -->
+  <footer class="black-bar">
+    <p>&copy; 2025 Wings Media. All rights reserved. Powered by truth & freedom.</p>
+  </footer>
+
+  <!-- Transitions -->
   <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const revealTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-      if (revealTop < windowHeight - revealPoint) {
-        el.classList.add('visible');
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      if (!link.href.startsWith("#")) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location = link.href;
+          }, 300);
+        });
       }
     });
-  });
-</script>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="articles.html" class="nav-link">Articles</a>
-        <a href="podcasts.html" class="nav-link">Podcasts</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-    </div>
-  </header>
+  </script>
 
-  <main class="page-content fade-in">
-    <h1>📬 Contact Us</h1>
-    <p class="intro-text">Got a story to share, a show idea, or just want to say hi? Drop us a message below or connect with us on social media.</p>
-
-    <form class="contact-form" action="mailto:akhileshramamoorthy39@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 WingsMedia. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WingsMedia - [PAGE NAME]</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="fade-in">
-
-  <header>
-    <div class="container">
-      <div class="logo">WingsMedia</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="podcasts.html">Podcasts</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-content">
-    <!-- Unique page content goes here -->
-  </main>
-
-  <footer>
-    <p>© 2025 WingsMedia. All rights reserved.</p>
-  </footer>
-<main>
-    <section class="hero">
-        <h1>Contact Wings Media</h1>
-        <p>Have questions, ideas, or feedback? We'd love to hear from you.</p>
-    </section>
-
-    <section class="features">
-        <div class="feature">
-            <h2>Email Us</h2>
-            <p><a href="mailto:akhileshramamoorthy39@gmail.com">akhileshramamoorthy39@gmail.com</a></p>
-        </div>
-        <div class="feature">
-            <h2>Phone</h2>
-            <p><a href="tel:+918838227862">+91 88382 27862</a></p>
-        </div>
-        <div class="feature">
-            <h2>LinkedIn</h2>
-            <p><a href="https://linkedin.com/in/akhilesh-v-s-564546236" target="_blank">Message us here</a></p>
-        </div>
-    </section>
-</main>
 </body>
 </html>
