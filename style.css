@@ -1,82 +1,114 @@
-/* General Reset and Layout */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  color: #333;
 }
 
-/* Header Section */
+/* Header */
 header {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
 }
 
-header .logo img {
-    width: 200px; /* Increase logo size */
-    height: auto;
+.logo img {
+  width: 200px; /* increased logo size */
+  height: auto;
 }
 
-/* Meet Our Team Section */
-#team {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 equal-width columns */
-    gap: 30px; /* Space between the team boxes */
-    padding: 60px 0; /* Increased vertical space */
-    background-color: #fff;
-    text-align: center;
+/* Team Section */
+#members {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+#members h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .team-member {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .team-member:hover {
-    transform: translateY(-10px); /* Hover effect */
+  transform: translateY(-8px);
 }
 
 .team-member img {
-    width: 100px; /* Image size */
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
 }
 
 .team-member h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .team-member p {
-    font-size: 0.9em;
-    color: #666;
+  font-size: 0.95rem;
+  color: #666;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1200px) {
-    #team {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
-    }
+/* Mission & Vision */
+#mission-vision {
+  background: #eaf4fc;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-@media (max-width: 900px) {
-    #team {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
-    }
+#mission-vision h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-@media (max-width: 600px) {
-    #team {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
-    }
+.mv-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.mv-box {
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.mv-box h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #0073e6;
+}
+
+.mv-box p {
+  font-size: 1rem;
+  color: #444;
 }
