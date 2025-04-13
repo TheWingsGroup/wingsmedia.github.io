@@ -1,61 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WingsMedia | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WingsMedia</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Top Navbar -->
   <header class="navbar">
-    <div class="logo" onclick="goHome()">Wings<span>Media</span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="podcasts.html">Podcasts</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-links">
+      <a href="about.html">About Us</a>
+      <a href="releases.html">Latest Releases</a>
+      <a href="podcasts.html">Podcasts</a>
+    </div>
+    <div class="logo">
+      <img src="211CC4E3-6156-4056-B8A2-E9BD91047B83.png" alt="WingsMedia Logo" />
+    </div>
+    <div class="nav-links">
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Connect</a>
+    </div>
   </header>
 
-  <main class="fade-in">
-    <section class="hero">
-      <h1>Empowering Voices. Telling Stories.</h1>
-      <p>WingsMedia is a collaborative digital platform for creators, thinkers, and dreamers. Dive into curated articles, insightful podcasts, and powerful narratives.</p>
-      <a href="podcasts.html" class="btn">🎧 Explore Podcasts</a>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-text">
+      <h1>Let Your Ideas Take Flight</h1>
+      <p>WingsMedia is a youth-powered media revolution — bringing bold voices, fresh takes, and fearless narratives to life.</p>
+      <a href="about.html" class="hero-button">Explore WingsMedia</a>
+    </div>
+  </section>
 
-    <section class="features">
-      <div class="card">
-        <h2>Quality Articles</h2>
-        <p>Sharp, insightful writing on tech, culture, and more by our in-house talent.</p>
-      </div>
-      <div class="card">
-        <h2>Top Creators</h2>
-        <p>From Akhilesh to Navaneet, explore our creative thinkers and hosts.</p>
-      </div>
-      <div class="card">
-        <h2>Built for You</h2>
-        <p>Crafted to give you a distraction-free experience with beautiful transitions.</p>
-      </div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 WingsMedia. Built by creators for creators.</p>
+    <p>© 2025 WingsMedia. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('main').classList.add('fade-in');
-    });
-    function goHome() {
-      window.location.href = 'index.html';
-    }
-  </script>
-</body>
-</html>
+  <script src="script.js"></script>
 </body>
 </html>
