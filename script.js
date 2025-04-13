@@ -1,27 +1,61 @@
-// Function to create bubbles dynamically
-function createBubble() {
-  const bubble = document.createElement("div");
-  bubble.classList.add("bubble");
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-  // Random size for bubbles
-  const size = Math.random() * 40 + 20; // Size between 20px and 60px
-  bubble.style.width = `${size}px`;
-  bubble.style.height = `${size}px`;
+let particlesArray = [];
 
-  // Random position for bubbles
-  const xPos = Math.random() * window.innerWidth;
-  const yPos = Math.random() * window.innerHeight;
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 8 + 4;
+    this.speedX = Math.random() * 1 - 0.5;
+    this.speedY = Math.random() * 1 - 0.5;
+    this.color = 'rgba(0, 194, 255, 0.6)';
+  }
 
-  bubble.style.left = `${xPos}px`;
-  bubble.style.top = `${yPos}px`;
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
 
-  document.body.appendChild(bubble);
+    // wrap around screen
+    if (this.x > canvas.width) this.x = 0;
+    if (this.x < 0) this.x = canvas.width;
+    if (this.y > canvas.height) this.y = 0;
+    if (this.y < 0) this.y = canvas.height;
+  }
 
-  // Remove bubble after animation ends
-  setTimeout(() => {
-    bubble.remove();
-  }, 15000); // Matches the float animation duration
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = "#00C2FF";
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
 }
 
-// Create bubbles at regular intervals
-setInterval(createBubble, 500); // Add a new bubble every 500ms
+function init() {
+  particlesArray = [];
+  for (let i = 0; i < 25; i++) {
+    particlesArray.push(new Particle());
+  }
+}
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particlesArray.forEach(p => {
+    p.update();
+    p.draw();
+  });
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener('resize', () => {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+  init();
+});
+
+init();
+animate();
