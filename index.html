@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WingsMedia</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
-  <!-- Top Navbar -->
-  <header class="navbar">
-    <div class="nav-links">
-      <a href="about.html">About Us</a>
-      <a href="releases.html">Latest Releases</a>
-      <a href="podcasts.html">Podcasts</a>
-    </div>
-    <div class="logo">
-      <img src="211CC4E3-6156-4056-B8A2-E9BD91047B83.png" alt="WingsMedia Logo" />
-    </div>
-    <div class="nav-links">
-      <a href="articles.html">Articles</a>
-      <a href="contact.html">Connect</a>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🕊️ WINGSMEDIA</div>
+      <ul class="nav-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Latest Releases</a></li>
+        <li><a href="#">Podcasts</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Connect With Us</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <canvas id="bgCanvas"></canvas>
-    <div class="hero-text">
+    <div class="bubbles"></div>
+    <div class="hero-content">
       <h1>Let Your Ideas Take Flight</h1>
       <p>WingsMedia is a youth-powered media revolution — bringing bold voices, fresh takes, and fearless narratives to life.</p>
-      <a href="about.html" class="hero-button">Explore WingsMedia</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 WingsMedia. All Rights Reserved.</p>
+  <section class="latest">
+    <h2>Latest Releases</h2>
+    <div class="card-container">
+      <div class="card" onclick="openAnimated('podcasts')">
+        <h3>🎙️ Podcasts</h3>
+        <p>Powerful, thought-provoking episodes for the free thinker.</p>
+      </div>
+      <div class="card" onclick="openAnimated('articles')">
+        <h3>📝 Articles</h3>
+        <p>Bold Ideas, challenging norms. Read our latest.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 WingsMedia. All rights reserved. Powered by truth & freedom.</p>
   </footer>
 
   <script src="script.js"></script>
