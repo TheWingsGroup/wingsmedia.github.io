@@ -1,78 +1,103 @@
-/* Reset all default margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Ensure the body fills the entire page and has no overflow */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f7f7;
-  color: #000;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  position: relative; /* Allows for the absolute positioning of bubbles */
-  overflow: hidden; /* Prevents bubbles from overflowing */
 }
 
-/* Bubble styling */
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
-  animation: float 15s infinite ease-in-out; /* Floating animation */
-  pointer-events: none; /* Bubbles do not interfere with user interaction */
-  opacity: 0.7; /* Slight transparency */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  padding: 15px 40px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Bubble floating animation */
-@keyframes float {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-50px) scale(1.2);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Adjustments for sections, making the background color for each section different */
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Ensure bubbles are positioned on top of hero background */
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-.hero span {
-  color: #00bfff;
-}
-
-.tagline {
-  font-size: 1.5em;
-  font-style: italic;
-}
-
-/* Team section */
-.team {
-  padding: 60px 40px;
-  background: #fff;
-  text-align: center;
   position: relative;
+  background: linear-gradient(180deg, #010101, #111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
 }
 
-.team-members {
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/circles.png');
+  background-size: 100px;
+  animation: float 20s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes float {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #ccc;
+}
+
+.latest {
+  background: #fff;
+  color: #000;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.card-container {
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -80,59 +105,24 @@ body {
   flex-wrap: wrap;
 }
 
-.member-card {
-  background: #f2f2f2;
-  padding: 20px;
-  border-radius: 12px;
-  width: 250px;
-  transition: transform 0.3s;
+.card {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 280px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.member-card:hover {
-  transform: translateY(-10px);
+.card:hover {
+  transform: scale(1.05);
 }
 
-.member-card img {
-  width: 100%;
-  border-radius: 12px;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Mission Section */
-.mission {
-  background: #e8f0fe;
-  padding: 60px 20px;
-  text-align: center;
-  position: relative;
-}
-
-.releases {
-  background: #fff;
-  padding: 60px 40px;
-  text-align: center;
-  position: relative;
-}
-
-.contact {
-  padding: 60px 40px;
-  background: #f8f9fa;
-  text-align: center;
-  position: relative;
-}
-
-/* Footer */
 footer {
   background: #000;
   color: white;
   text-align: center;
-  padding: 15px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .team-members {
-    flex-direction: column;
-    align-items: center;
-  }
+  padding: 20px;
+  font-size: 0.9rem;
 }
