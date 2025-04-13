@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,114 +7,76 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f7f7f7; /* Background color for the page */
+  background: #f7f7f7;
   color: #000;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  position: relative; /* Allows bubbles to stay behind the content */
+  position: relative;
 }
 
-/* Floating Bubble Animation */
-@keyframes float {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.2);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
-
+/* Floating Bubbles Animation */
 .bubble {
   position: absolute;
-  background-color: rgba(0, 191, 255, 0.6);
   border-radius: 50%;
-  animation: float 10s infinite ease-in-out;
+  background: rgba(0, 191, 255, 0.5);
+  animation: bubbleAnimation 8s infinite ease-in-out;
 }
 
 .bubble:nth-child(1) {
-  width: 50px;
-  height: 50px;
-  top: 20%;
-  left: 10%;
-  animation-duration: 10s;
+  width: 70px;
+  height: 70px;
+  bottom: -50px;
+  left: 20%;
+  animation-delay: 0s;
 }
 
 .bubble:nth-child(2) {
-  width: 70px;
-  height: 70px;
-  top: 40%;
-  left: 60%;
-  animation-duration: 12s;
+  width: 80px;
+  height: 80px;
+  bottom: -80px;
+  left: 40%;
+  animation-delay: 1.2s;
 }
 
 .bubble:nth-child(3) {
   width: 60px;
   height: 60px;
-  top: 70%;
-  left: 80%;
-  animation-duration: 8s;
+  bottom: -100px;
+  left: 60%;
+  animation-delay: 2.4s;
 }
 
 .bubble:nth-child(4) {
-  width: 80px;
-  height: 80px;
-  top: 50%;
-  left: 20%;
-  animation-duration: 9s;
+  width: 100px;
+  height: 100px;
+  bottom: -50px;
+  left: 80%;
+  animation-delay: 3.6s;
 }
 
 .bubble:nth-child(5) {
-  width: 40px;
-  height: 40px;
-  top: 10%;
-  left: 80%;
-  animation-duration: 15s;
+  width: 75px;
+  height: 75px;
+  bottom: -120px;
+  left: 50%;
+  animation-delay: 4.8s;
 }
 
-/* Section Styles with Contrast Colors */
-section {
-  padding: 60px 20px;
-  text-align: center;
-  position: relative; /* Ensure content is above bubbles */
-  z-index: 1; /* Keep sections above bubbles */
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-150px) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
 }
 
-.hero {
-  background-color: #2b2d42; /* Dark background for hero section */
-  color: white;
-}
-
-.team {
-  background-color: #f5a623; /* Contrasting yellow-orange for team section */
-  color: white;
-}
-
-.mission {
-  background-color: #1b1f3b; /* Dark blue background for mission section */
-  color: white;
-}
-
-.releases {
-  background-color: #ff7f50; /* Coral color for new releases section */
-  color: white;
-}
-
-.contact {
-  background-color: #4e8a8a; /* Greenish background for contact section */
-  color: white;
-}
-
-footer {
-  background-color: #333; /* Footer with dark background */
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* NAVIGATION BAR */
+/* Sections Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -126,53 +89,156 @@ footer {
   z-index: 100;
 }
 
-/* Other Styles for Navbar and Content */
-.navbar a {
+.navbar nav a {
   color: white;
+  margin-left: 20px;
   text-decoration: none;
-  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+.navbar nav a:hover {
+  color: #00bfff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
-.hero .tagline {
-  font-size: 24px;
-  font-weight: lighter;
+.hero span {
+  color: #00bfff;
+}
+
+.tagline {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+/* Team Section */
+.team {
+  padding: 60px 40px;
+  background: #fff;
+  text-align: center;
 }
 
 .team-members {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 
 .member-card {
-  background: white;
+  background: #f2f2f2;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  margin: 10px;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+}
+
+.member-card img {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Mission Section */
+.mission {
+  background: #e8f0fe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Releases Section */
+.releases {
+  background: #fff;
+  padding: 60px 40px;
+  text-align: center;
 }
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  margin: 10px;
+  background: #d9eaf7;
+  padding: 30px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 40px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 15px;
+  background: #000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00bfff;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0
