@@ -1,107 +1,44 @@
-/* Global Styles */
+/* Reset all default margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Ensure the body fills the entire page and has no overflow */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f7f7f7;
+  background-color: #f7f7f7;
   color: #000;
   scroll-behavior: smooth;
-  position: relative;
+  position: relative; /* Allows for the absolute positioning of bubbles */
+  overflow: hidden; /* Prevents bubbles from overflowing */
 }
 
-/* Floating Bubbles Animation */
+/* Bubble styling */
 .bubble {
   position: absolute;
   border-radius: 50%;
-  background: rgba(0, 191, 255, 0.5);
-  animation: bubbleAnimation 8s infinite ease-in-out;
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+  animation: float 15s infinite ease-in-out; /* Floating animation */
+  pointer-events: none; /* Bubbles do not interfere with user interaction */
+  opacity: 0.7; /* Slight transparency */
 }
 
-.bubble:nth-child(1) {
-  width: 70px;
-  height: 70px;
-  bottom: -50px;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.bubble:nth-child(2) {
-  width: 80px;
-  height: 80px;
-  bottom: -80px;
-  left: 40%;
-  animation-delay: 1.2s;
-}
-
-.bubble:nth-child(3) {
-  width: 60px;
-  height: 60px;
-  bottom: -100px;
-  left: 60%;
-  animation-delay: 2.4s;
-}
-
-.bubble:nth-child(4) {
-  width: 100px;
-  height: 100px;
-  bottom: -50px;
-  left: 80%;
-  animation-delay: 3.6s;
-}
-
-.bubble:nth-child(5) {
-  width: 75px;
-  height: 75px;
-  bottom: -120px;
-  left: 50%;
-  animation-delay: 4.8s;
-}
-
-@keyframes bubbleAnimation {
+/* Bubble floating animation */
+@keyframes float {
   0% {
     transform: translateY(0) scale(1);
-    opacity: 0.8;
   }
   50% {
-    transform: translateY(-150px) scale(1.2);
-    opacity: 0.5;
+    transform: translateY(-50px) scale(1.2);
   }
   100% {
     transform: translateY(0) scale(1);
-    opacity: 0.8;
   }
 }
 
-/* Sections Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: white;
-  padding: 20px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.navbar nav a:hover {
-  color: #00bfff;
-}
-
-/* Hero Section */
+/* Adjustments for sections, making the background color for each section different */
 .hero {
   height: 100vh;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -110,7 +47,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 2s ease-in-out;
+  position: relative; /* Ensure bubbles are positioned on top of hero background */
 }
 
 .hero h1 {
@@ -127,11 +64,12 @@ body {
   font-style: italic;
 }
 
-/* Team Section */
+/* Team section */
 .team {
   padding: 60px 40px;
   background: #fff;
   text-align: center;
+  position: relative;
 }
 
 .team-members {
@@ -166,70 +104,21 @@ body {
   background: #e8f0fe;
   padding: 60px 20px;
   text-align: center;
+  position: relative;
 }
 
-/* Releases Section */
 .releases {
   background: #fff;
   padding: 60px 40px;
   text-align: center;
+  position: relative;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #d9eaf7;
-  padding: 30px;
-  border-radius: 12px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* Contact Section */
 .contact {
   padding: 60px 40px;
   background: #f8f9fa;
   text-align: center;
-}
-
-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 15px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-button {
-  padding: 15px;
-  background: #000;
-  color: white;
-  border: none;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #00bfff;
+  position: relative;
 }
 
 /* Footer */
@@ -240,51 +129,10 @@ footer {
   padding: 15px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0
-/* Ensures everything has no margin or padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f7f7f7;  /* Adjust this background to match your design */
-  color: #000;
-  scroll-behavior: smooth;
-  position: relative; /* Allows absolute positioning of bubbles */
-  overflow: hidden;  /* Ensures bubbles stay inside the page */
-}
-
-/* Styling for bubbles */
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white for bubbles */
-  animation: float 10s infinite ease-in-out;  /* Floating animation */
-  pointer-events: none;  /* Bubbles will not block user interactions */
-  opacity: 0.7;  /* Slightly transparent */
-}
-
-/* Bubble floating animation */
-@keyframes float {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-50px) scale(1.2);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Apply for users who prefer reduced motion */
-@media (prefers-reduced-motion) {
-  .bubble {
-    animation: none;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
   }
 }
