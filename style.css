@@ -1,101 +1,128 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
   color: white;
-  background: black;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
-.navbar {
+header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: black;
+  background: #000;
+  padding: 15px 40px;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  z-index: 10;
-}
-.logo img {
-  height: 60px;
-  object-fit: contain;
-}
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-.nav-links a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.nav-links a:hover {
-  color: #00C2FF;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;
+.navbar {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(180deg, #010101, #111);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   overflow: hidden;
-}
-.hero-text {
-  position: absolute;
   text-align: center;
-  z-index: 2;
-}
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-.hero-text p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 40px;
-}
-.hero-button {
-  padding: 15px 30px;
-  border-radius: 30px;
-  background: #00C2FF;
-  color: black;
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-.hero-button:hover {
-  background: #00a3d6;
 }
 
-/* Canvas Background */
-#bgCanvas {
+.bubbles {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  background: url('https://www.transparenttextures.com/patterns/circles.png');
+  background-size: 100px;
+  animation: float 20s linear infinite;
+  opacity: 0.2;
 }
 
-/* Footer */
-.footer {
-  background: black;
+@keyframes float {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #ccc;
+}
+
+.latest {
+  background: #fff;
+  color: #000;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 280px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #000;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   font-size: 0.9rem;
-  margin-top: -4px;
 }
