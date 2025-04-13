@@ -59,8 +59,12 @@ window.addEventListener('resize', () => {
 
 init();
 animate();
-// Smooth scroll animation effects can be added later here if needed
-function openAnimated(section) {
-  alert(`Open ${section} with animated paper-crush effect!`);
-  // You can replace this with your routing/animation logic
 }
+// === PARALLAX BACKGROUND EFFECT ===
+window.addEventListener("scroll", () => {
+  const bg = document.querySelector(".hero-bg");
+  if (bg) {
+    let scroll = window.scrollY;
+    bg.style.transform = `translateY(${scroll * 0.4}px)`;
+  }
+});
