@@ -3,59 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wings Media</title>
+  <title>About | WingsMedia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="fade-out">
-
-  <!-- Header -->
-  <header class="black-bar">
-    <a href="index.html" class="logo">🕊️</a>
+<body>
+  <header class="navbar">
+    <div class="logo" onclick="goHome()">Wings<span>Media</span></div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="podcasts.html">Podcasts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-<main>
-  <section class="hero">
-    <h1>About Wings Media</h1>
-    <p>We’re a voice for the voiceless. Meet the minds behind the mission.</p>
-  </section>
+  <main class="fade-in">
+    <section class="hero">
+      <h1>Meet the WingsMedia Team</h1>
+      <p>We are a group of passionate storytellers building a digital space for voices to be heard.</p>
+    </section>
 
-  <section class="features">
-    <div class="feature"><h2>🎙️ Purushothaman</h2><p>Leading fearless debates with courage and insight.</p></div>
-    <div class="feature"><h2>🎤 Dinesh</h2><p>Bold youth perspective that shakes the system.</p></div>
-    <div class="feature"><h2>📢 Akhilesh</h2><p>Tech + innovation driving our digital revolution.</p></div>
-    <div class="feature"><h2>📣 Navaneet</h2><p>Connector of stories and storyteller of impact.</p></div>
-    <div class="feature"><h2>🎧 Gowtham</h2><p>Audio magician making every word matter.</p></div>
-  </section>
-</main> 
-  <footer class="black-bar">
-    <p>&copy; 2025 Wings Media. All rights reserved. Powered by truth & freedom.</p>
+    <section class="features">
+      <div class="card"><h2>Akhilesh V S</h2><p>Founder of WingsMedia. Visionary, engineer & creator.</p></div>
+      <div class="card"><h2>Purushothaman</h2><p>Voice of our flagship tech podcast. Sharp and analytical.</p></div>
+      <div class="card"><h2>Dinesh</h2><p>Design and audio genius behind WingsMedia’s smoothest content.</p></div>
+      <div class="card"><h2>Gowtham</h2><p>Culture & stories curator. Brings life to our narrative voice.</p></div>
+      <div class="card"><h2>Navaneet</h2><p>Research and writing wizard. Crafts longform articles that inspire.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 WingsMedia. Built by creators for creators.</p>
   </footer>
 
-  <!-- Transitions -->
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.remove("fade-out");
-    });
-
-    document.querySelectorAll("a").forEach(link => {
-      if (!link.href.startsWith("#")) {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-          document.body.classList.add("fade-out");
-          setTimeout(() => {
-            window.location = link.href;
-          }, 300);
-        });
-      }
-    });
+    function goHome() {
+      window.location.href = 'index.html';
+    }
   </script>
-
 </body>
 </html>
