@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -7,152 +6,169 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+  color: #000;
   scroll-behavior: smooth;
-  background: #f5f5f5;
-  color: #111;
-  overflow-x: hidden;
-  position: relative;
 }
 
-/* Header */
-header {
-  background: #000;
-  color: white;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-nav a {
+  background: #000;
   color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  transition: 0.3s;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-nav a:hover {
+.navbar nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
   color: #00bfff;
 }
 
-/* Hero Section */
 .hero {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-  position: relative;
-  z-index: 1;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #333;
+.hero span {
+  color: #00bfff;
 }
 
-/* Releases */
-.releases {
-  padding: 3rem 2rem;
-  background: #f9f9f9;
+.tagline {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.team {
+  padding: 60px 40px;
+  background: #fff;
   text-align: center;
 }
 
-.releases h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.member-card {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+}
+
+.member-card img {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mission {
+  background: #e8f0fe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.releases {
+  background: #fff;
+  padding: 60px 40px;
+  text-align: center;
 }
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: white;
-  padding: 1.5rem 2rem;
+  background: #d9eaf7;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   width: 250px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
 
-/* Footer */
+.contact {
+  padding: 60px 40px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 15px;
+  background: #000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00bfff;
+}
+
 footer {
   background: #000;
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-  z-index: 2;
-  position: relative;
+  padding: 15px;
 }
 
-/* Animation */
-.animation-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.bubble {
-  position: absolute;
-  bottom: -100px;
-  width: 20px;
-  height: 20px;
-  background: rgba(0, 191, 255, 0.3);
-  border-radius: 50%;
-  animation: floatUp 12s infinite ease-in;
-}
-
-.bubble:nth-child(1) {
-  left: 10%;
-  animation-delay: 0s;
-}
-.bubble:nth-child(2) {
-  left: 50%;
-  animation-delay: 3s;
-}
-.bubble:nth-child(3) {
-  left: 80%;
-  animation-delay: 6s;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-50vh) scale(1.2);
-  }
-  100% {
-    transform: translateY(-100vh) scale(0.8);
-    opacity: 0;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
