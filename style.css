@@ -1,219 +1,82 @@
+/* General Reset and Layout */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f7f7f7;
-  color: #000;
-  scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
+/* Header Section */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: white;
-  padding: 20px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+header .logo img {
+    width: 200px; /* Increase logo size */
+    height: auto;
 }
 
-.navbar nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+/* Meet Our Team Section */
+#team {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal-width columns */
+    gap: 30px; /* Space between the team boxes */
+    padding: 60px 0; /* Increased vertical space */
+    background-color: #fff;
+    text-align: center;
 }
 
-.navbar nav a:hover {
-  color: #00bfff;
+.team-member {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  text-align: center;
+.team-member:hover {
+    transform: translateY(-10px); /* Hover effect */
 }
 
-.hero h1 {
-  font-size: 4em;
-  margin-bottom: 10px;
+.team-member img {
+    width: 100px; /* Image size */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-.hero span {
-  color: #00bfff;
+.team-member h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.tagline {
-  font-size: 1.5em;
-  font-style: italic;
+.team-member p {
+    font-size: 0.9em;
+    color: #666;
 }
 
-/* Team Section */
-.team {
-  background: #ffffff;
-  text-align: center;
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    #team {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    }
 }
 
-.team h2 {
-  font-size: 2.5em;
-  margin-bottom: 40px;
+@media (max-width: 900px) {
+    #team {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
 }
 
-.team-members {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.member-card {
-  background: #f2f2f2;
-  padding: 20px;
-  border-radius: 16px;
-  width: 280px;
-  height: 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  text-align: center;
-}
-
-.member-card img {
-  width: 100%;
-  height: 60%;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.member-card h3 {
-  margin: 10px 0 5px;
-  font-size: 1.3em;
-}
-
-.member-card p {
-  font-size: 0.95em;
-  color: #333;
-}
-
-/* Vision/Mission Section */
-.mission {
-  background: #e8f0fe;
-}
-
-.mission h2 {
-  margin-bottom: 40px;
-  font-size: 2.5em;
-}
-
-.mission-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-.mission-box {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  width: 280px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  font-size: 1.1em;
-}
-
-/* New Releases Section */
-.releases {
-  background: #fff;
-  text-align: center;
-}
-
-.releases h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  background: #d9eaf7;
-  padding: 30px;
-  border-radius: 12px;
-  width: 280px;
-  height: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* Contact Section */
-.contact {
-  background: #f8f9fa;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-}
-
-form {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 15px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-button {
-  padding: 15px;
-  background: #000;
-  color: white;
-  border: none;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #00bfff;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 15px;
+@media (max-width: 600px) {
+    #team {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
 }
