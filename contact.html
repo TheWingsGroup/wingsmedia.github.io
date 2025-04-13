@@ -3,62 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wings Media</title>
+  <title>Contact | WingsMedia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="fade-out">
-
-  <!-- Header -->
-  <header class="black-bar">
-    <a href="index.html" class="logo">🕊️</a>
+<body>
+  <header class="navbar">
+    <div class="logo" onclick="goHome()">Wings<span>Media</span></div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-      <a href="podcasts.html">Podcasts</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="podcasts.html">Podcasts</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  
-  <main>
-    <main>
-  <section class="hero">
-    <h1>Get in Touch</h1>
-    <p>We’re here to listen. Contact Wings Media for ideas, questions, or collabs.</p>
-  </section>
+  <main class="fade-in">
+    <section class="hero">
+      <h1>Contact WingsMedia</h1>
+      <p>Want to collaborate, contribute or ask us something? Reach out below.</p>
+    </section>
 
-  <section class="features">
-    <div class="feature"><h2>Email</h2><p><a href="mailto:akhileshramamoorthy39@gmail.com">akhileshramamoorthy39@gmail.com</a></p></div>
-    <div class="feature"><h2>Phone</h2><p><a href="tel:+918838227862">+91 88382 27862</a></p></div>
-    <div class="feature"><h2>LinkedIn</h2><p><a href="https://linkedin.com/in/akhilesh-v-s-564546236" target="_blank">Connect with us here</a></p></div>
-  </section>
-</main>
+    <section class="features">
+      <div class="card">
+        <h2>Email Us</h2>
+        <p>wingsmediacreators@gmail.com</p>
+      </div>
+      <div class="card">
+        <h2>Connect on LinkedIn</h2>
+        <p><a href="https://www.linkedin.com" target="_blank">LinkedIn - WingsMedia</a></p>
+      </div>
+      <div class="card">
+        <h2>Follow us on Medium</h2>
+        <p><a href="https://medium.com" target="_blank">medium.com/@wingsmedia</a></p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="black-bar">
-    <p>&copy; 2025 Wings Media. All rights reserved. Powered by truth & freedom.</p>
+  <footer class="footer">
+    <p>© 2025 WingsMedia. Built by creators for creators.</p>
   </footer>
 
-  <!-- Transitions -->
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.remove("fade-out");
-    });
-
-    document.querySelectorAll("a").forEach(link => {
-      if (!link.href.startsWith("#")) {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-          document.body.classList.add("fade-out");
-          setTimeout(() => {
-            window.location = link.href;
-          }, 300);
-        });
-      }
-    });
+    function goHome() {
+      window.location.href = 'index.html';
+    }
   </script>
-
 </body>
 </html>
