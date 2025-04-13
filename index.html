@@ -7,34 +7,55 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="navbar">
-    <div class="logo"><a href="index.html">WINGS<span>MEDIA</span></a></div>
+    <div class="logo" onclick="goHome()">Wings<span>Media</span></div>
     <nav>
       <ul>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="podcasts.html">Podcasts</a></li>
         <li><a href="articles.html">Articles</a></li>
+        <li><a href="podcasts.html">Podcasts</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="content fade-in">
+  <main class="fade-in">
     <section class="hero">
-      <h1>Welcome to <span>WingsMedia</span></h1>
-      <p>Your voice. Your story. Unfiltered. Bold. Free.</p>
-      <a href="podcasts.html" class="cta-button">🎧 Listen to Our Podcasts</a>
+      <h1>Empowering Voices. Telling Stories.</h1>
+      <p>WingsMedia is a collaborative digital platform for creators, thinkers, and dreamers. Dive into curated articles, insightful podcasts, and powerful narratives.</p>
+      <a href="podcasts.html" class="btn">🎧 Explore Podcasts</a>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h2>Quality Articles</h2>
+        <p>Sharp, insightful writing on tech, culture, and more by our in-house talent.</p>
+      </div>
+      <div class="card">
+        <h2>Top Creators</h2>
+        <p>From Akhilesh to Navaneet, explore our creative thinkers and hosts.</p>
+      </div>
+      <div class="card">
+        <h2>Built for You</h2>
+        <p>Crafted to give you a distraction-free experience with beautiful transitions.</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 WingsMedia. All rights reserved.</p>
+    <p>© 2025 WingsMedia. Built by creators for creators.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('main').classList.add('fade-in');
+    });
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
-
 </body>
 </html>
