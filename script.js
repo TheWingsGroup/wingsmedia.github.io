@@ -59,3 +59,8 @@ window.addEventListener('resize', () => {
 
 init();
 animate();
+// Smooth scroll animation effects can be added later here if needed
+function openAnimated(section) {
+  alert(`Open ${section} with animated paper-crush effect!`);
+  // You can replace this with your routing/animation logic
+}
