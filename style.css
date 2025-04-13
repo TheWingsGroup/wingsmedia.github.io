@@ -242,3 +242,49 @@ footer {
 
 @keyframes fadeIn {
   from { opacity: 0
+/* Ensures everything has no margin or padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;  /* Adjust this background to match your design */
+  color: #000;
+  scroll-behavior: smooth;
+  position: relative; /* Allows absolute positioning of bubbles */
+  overflow: hidden;  /* Ensures bubbles stay inside the page */
+}
+
+/* Styling for bubbles */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white for bubbles */
+  animation: float 10s infinite ease-in-out;  /* Floating animation */
+  pointer-events: none;  /* Bubbles will not block user interactions */
+  opacity: 0.7;  /* Slightly transparent */
+}
+
+/* Bubble floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-50px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Apply for users who prefer reduced motion */
+@media (prefers-reduced-motion) {
+  .bubble {
+    animation: none;
+  }
+}
