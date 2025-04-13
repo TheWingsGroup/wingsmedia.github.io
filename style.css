@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,86 +6,111 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f7f7f7;
+  background: #f7f7f7; /* Background color for the page */
   color: #000;
   scroll-behavior: smooth;
-  position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative; /* Allows bubbles to stay behind the content */
 }
 
-/* Bubbles Animation (Floating effect) */
-.bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1; /* Makes sure the bubbles are in the background */
-  pointer-events: none; /* Ensures it doesn't block any content */
-}
-
-.bubbles .bubble {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  animation: bubbleAnim 10s infinite ease-in-out;
-}
-
-@keyframes bubbleAnim {
+/* Floating Bubble Animation */
+@keyframes float {
   0% {
-    transform: translateY(100vh) scale(0);
-    opacity: 1;
+    transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-100vh) scale(1);
-    opacity: 0.6;
+    transform: translateY(-20px) scale(1.2);
   }
   100% {
-    transform: translateY(100vh) scale(0);
-    opacity: 0;
+    transform: translateY(0) scale(1);
   }
 }
 
-/* Generating Bubbles Randomly */
-.bubbles .bubble:nth-child(1) {
-  left: 10%;
-  animation-duration: 12s;
-  animation-delay: 2s;
+.bubble {
+  position: absolute;
+  background-color: rgba(0, 191, 255, 0.6);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) {
   width: 50px;
   height: 50px;
+  top: 20%;
+  left: 10%;
+  animation-duration: 10s;
 }
 
-.bubbles .bubble:nth-child(2) {
-  left: 40%;
-  animation-duration: 14s;
-  animation-delay: 0s;
+.bubble:nth-child(2) {
   width: 70px;
   height: 70px;
+  top: 40%;
+  left: 60%;
+  animation-duration: 12s;
 }
 
-.bubbles .bubble:nth-child(3) {
-  left: 70%;
-  animation-duration: 16s;
-  animation-delay: 4s;
-  width: 40px;
-  height: 40px;
-}
-
-.bubbles .bubble:nth-child(4) {
-  left: 20%;
-  animation-duration: 13s;
-  animation-delay: 5s;
+.bubble:nth-child(3) {
   width: 60px;
   height: 60px;
+  top: 70%;
+  left: 80%;
+  animation-duration: 8s;
 }
 
-.bubbles .bubble:nth-child(5) {
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 20%;
+  animation-duration: 9s;
+}
+
+.bubble:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  top: 10%;
   left: 80%;
-  animation-duration: 18s;
-  animation-delay: 6s;
-  width: 30px;
-  height: 30px;
+  animation-duration: 15s;
+}
+
+/* Section Styles with Contrast Colors */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative; /* Ensure content is above bubbles */
+  z-index: 1; /* Keep sections above bubbles */
+}
+
+.hero {
+  background-color: #2b2d42; /* Dark background for hero section */
+  color: white;
+}
+
+.team {
+  background-color: #f5a623; /* Contrasting yellow-orange for team section */
+  color: white;
+}
+
+.mission {
+  background-color: #1b1f3b; /* Dark blue background for mission section */
+  color: white;
+}
+
+.releases {
+  background-color: #ff7f50; /* Coral color for new releases section */
+  color: white;
+}
+
+.contact {
+  background-color: #4e8a8a; /* Greenish background for contact section */
+  color: white;
+}
+
+footer {
+  background-color: #333; /* Footer with dark background */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 /* NAVIGATION BAR */
@@ -102,117 +126,53 @@ body {
   z-index: 100;
 }
 
-.navbar nav a {
+/* Other Styles for Navbar and Content */
+.navbar a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  margin: 0 15px;
 }
 
-.navbar nav a:hover {
-  color: #00bfff;
-}
-
-/* HERO SECTION */
-.hero {
-  height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 2s ease-in-out;
+.navbar a:hover {
+  text-decoration: underline;
 }
 
 .hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.hero span {
-  color: #00bfff;
-}
-
-.tagline {
-  font-size: 1.5em;
-  font-style: italic;
-}
-
-/* TEAM SECTION */
-.team {
-  padding: 60px 40px;
-  background: #fff;
-  text-align: center;
+.hero .tagline {
+  font-size: 24px;
+  font-weight: lighter;
 }
 
 .team-members {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .member-card {
-  background: #f2f2f2;
+  background: white;
   padding: 20px;
-  border-radius: 12px;
-  width: 250px;
-  transition: transform 0.3s;
-}
-
-.member-card:hover {
-  transform: translateY(-10px);
-}
-
-.member-card img {
-  width: 100%;
-  border-radius: 12px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.mission {
-  background: #e8f0fe;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.releases {
-  background: #fff;
-  padding: 60px 40px;
-  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 10px;
 }
 
 .cards {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #d9eaf7;
-  padding: 30px;
-  border-radius: 12px;
-  width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 10px;
 }
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.contact {
-  padding: 60px 40px;
-  background: #f8f9fa;
-  text-align: center;
-}
-
-form {
-  max-width: 500px;
- 
