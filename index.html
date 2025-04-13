@@ -1,51 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Bubble Background</title>
-  <link rel="stylesheet" href="style.css">
+  <title>WingsMedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="nav-links">
+      <a href="about.html">About Us</a>
+      <a href="releases.html">Latest Releases</a>
+      <a href="podcasts.html">Podcasts</a>
+    </div>
+    <div class="logo">
+      <img src="211CC4E3-6156-4056-B8A2-E9BD91047B83.png" alt="WingsMedia Logo" />
+    </div>
+    <div class="nav-links">
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Connect</a>
+    </div>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to <span>Wings Media</span></h1>
-    <p class="tagline">Empowering creativity through technology</p>
-  </section>
-
-  <!-- Team Section -->
-  <section class="team">
-    <h2>Our Team</h2>
-    <div class="team-members">
-      <div class="member-card">
-        <img src="team1.jpg" alt="Team Member 1">
-        <h3>John Doe</h3>
-        <p>CEO & Founder</p>
-      </div>
-      <div class="member-card">
-        <img src="team2.jpg" alt="Team Member 2">
-        <h3>Jane Smith</h3>
-        <p>Creative Director</p>
-      </div>
-      <!-- Add more team members as needed -->
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-text">
+      <h1>Let Your Ideas Take Flight</h1>
+      <p>WingsMedia is a youth-powered media revolution — bringing bold voices, fresh takes, and fearless narratives to life.</p>
+      <a href="about.html" class="hero-button">Explore WingsMedia</a>
     </div>
   </section>
 
-  <!-- Mission Section -->
-  <section class="mission">
-    <h2>Our Mission</h2>
-    <p>We strive to provide the best services in the media industry.</p>
-  </section>
-
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Wings Media. All rights reserved.</p>
+  <footer class="footer">
+    <p>© 2025 WingsMedia. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
